@@ -2,6 +2,7 @@ package br.com.ideao.autowiringxml;
 
 import br.com.ideao.autowiringxml.domain.Application;
 import br.com.ideao.autowiringxml.domain.Employee;
+import br.com.ideao.autowiringxml.domain.Performer;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -18,6 +19,8 @@ public class App {
         Employee employee = (Employee) context.getBean("employee");
         System.out.println("Employee Details: " + employee);
 
+        Performer performer = (Performer) context.getBean("performer");
+        System.out.println("Performer Details: " +performer);
         context.registerShutdownHook();
     }
 }

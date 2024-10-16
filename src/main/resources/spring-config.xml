@@ -14,4 +14,9 @@
         <property name="street" value="112/223, SantaVila" />
         <property name="city" value="Nebraska" />
     </bean>
+
+    <bean id="performer" class="br.com.ideao.autowiringxml.domain.Performer" autowire="constructor" />
+    <bean id="instrument" class="br.com.ideao.autowiringxml.domain.Instrument">
+        <property name="name" value="PIANO"/>
+    </bean>
 </beans>
