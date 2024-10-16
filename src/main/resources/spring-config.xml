@@ -19,4 +19,11 @@
     <bean id="instrument" class="br.com.ideao.autowiringxml.domain.Instrument">
         <property name="name" value="PIANO"/>
     </bean>
+
+    <bean id="driver" class="br.com.ideao.autowiringxml.domain.Driver" autowire="no">
+        <property name="license" ref="license" />
+    </bean>
+    <bean id="license" class="br.com.ideao.autowiringxml.domain.License">
+        <property name="number" value="123456ABCD"/>
+    </bean>
 </beans>

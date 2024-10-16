@@ -1,6 +1,7 @@
 package br.com.ideao.autowiringxml;
 
 import br.com.ideao.autowiringxml.domain.Application;
+import br.com.ideao.autowiringxml.domain.Driver;
 import br.com.ideao.autowiringxml.domain.Employee;
 import br.com.ideao.autowiringxml.domain.Performer;
 import org.springframework.context.support.AbstractApplicationContext;
@@ -21,6 +22,10 @@ public class App {
 
         Performer performer = (Performer) context.getBean("performer");
         System.out.println("Performer Details: " +performer);
+
+        Driver driver = (Driver) context.getBean("driver");
+        System.out.println("Driver Details: " + driver);
+
         context.registerShutdownHook();
     }
 }
